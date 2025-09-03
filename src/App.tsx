@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
+import About from './components/About';
 import Solutions from './components/Solutions';
 import Skills from './components/Skills';
 import Education from './components/Education';
@@ -38,6 +39,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <About />
       <Solutions />
       <Skills />
       <Education />

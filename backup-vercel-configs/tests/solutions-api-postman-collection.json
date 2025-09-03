@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "a5e7b8c9-d0e1-4f23-a456-789b0c1d2e3f",
+		"name": "Solutions API Tests",
+		"description": "Testes para a API de Soluções baseados em cenários Gherkin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obter todas as soluções",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Cenário: Obter todas as soluções",
+							"",
+							"// Então o código de status da resposta deve ser 200",
+							"pm.test(\"Status code é 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// E o corpo da resposta deve conter uma lista de soluções",
+							"pm.test(\"Resposta contém uma lista de soluções\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);",
+							"});",
+							"",
+							"// E cada solução deve ter os campos \"id\", \"title\", \"description\", \"technologies\" e \"benefits\"",
+							"pm.test(\"Cada solução tem os campos obrigatórios\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    jsonData.forEach(function(item) {",
+							"        pm.expect(item).to.have.property('id');",
+							"        pm.expect(item).to.have.property('title');",
+							"        pm.expect(item).to.have.property('description');",
+							"        pm.expect(item).to.have.property('technologies');",
+							"        pm.expect(item).to.have.property('benefits');",
+							"    });",
+							"});",
+							"",
+							"// E o tamanho da lista deve ser 6",
+							"pm.test(\"A lista contém 6 soluções\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).to.eql(6);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/solutions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"solutions"
+					]
+				},
+				"description": "Obtém todas as soluções disponíveis na API"
+			},
+			"response": []
+		},
+		{
+			"name": "Obter solução específica por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Cenário: Obter uma solução específica por ID",
+							"",
+							"// Então o código de status da resposta deve ser 200",
+							"pm.test(\"Status code é 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// E o corpo da resposta deve conter uma solução",
+							"pm.test(\"Resposta contém uma solução\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.be.an('object');",
+							"});",
+							"",
+							"// E a solução deve ter o id \"automation-testing\"",
+							"pm.test(\"A solução tem o ID correto\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.eql(\"automation-testing\");",
+							"});",
+							"",
+							"// E a solução deve ter o título \"Automação de Testes UI\"",
+							"pm.test(\"A solução tem o título correto\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.title).to.eql(\"Automação de Testes UI\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/solutions/automation-testing",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"solutions",
+						"automation-testing"
+					]
+				},
+				"description": "Obtém uma solução específica pelo ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Tentar obter solução com ID inexistente",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Cenário: Tentar obter uma solução com ID inexistente",
+							"",
+							"// Então o código de status da resposta deve ser 404",
+							"pm.test(\"Status code é 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"// E o corpo da resposta deve conter uma mensagem de erro",
+							"pm.test(\"Resposta contém mensagem de erro\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property('error');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/solutions/id-inexistente",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"solutions",
+						"id-inexistente"
+					]
+				},
+				"description": "Tenta obter uma solução com ID inexistente"
+			},
+			"response": []
+		},
+		{
+			"name": "Obter lista simplificada de soluções",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Cenário: Obter lista simplificada de soluções",
+							"",
+							"// Então o código de status da resposta deve ser 200",
+							"pm.test(\"Status code é 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// E o corpo da resposta deve conter uma lista de soluções",
+							"pm.test(\"Resposta contém uma lista de soluções\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(Array.isArray(jsonData)).to.eql(true);",
+							"});",
+							"",
+							"// E cada item da lista deve ter apenas os campos \"id\" e \"title\"",
+							"pm.test(\"Cada item tem apenas os campos id e title\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    jsonData.forEach(function(item) {",
+							"        pm.expect(Object.keys(item).length).to.eql(2);",
+							"        pm.expect(item).to.have.property('id');",
+							"        pm.expect(item).to.have.property('title');",
+							"    });",
+							"});",
+							"",
+							"// E o tamanho da lista deve ser 6",
+							"pm.test(\"A lista contém 6 soluções\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).to.eql(6);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/solutions/list",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"solutions",
+						"list"
+					]
+				},
+				"description": "Obtém uma lista simplificada de soluções"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Pré-requisito: API de soluções está disponível",
+					"// Este script é executado antes de cada requisição"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3001",
+			"type": "string"
+		}
+	]
+}

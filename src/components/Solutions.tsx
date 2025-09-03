@@ -1,77 +1,8 @@
 import React from 'react';
-import { Bot, Globe, Shield, Zap, CheckCircle, BarChart3 } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { solutionsData } from '../data/solutionsData';
 
 const Solutions = () => {
-  const solutions = [
-    {
-      icon: <Bot size={24} />,
-      title: "Automação de Testes UI",
-      description: "Desenvolvimento de scripts automatizados para testes de interface de usuário",
-      technologies: ["TestComplete", "Katalon Studio", "Selenium", "Robot Framework"],
-      benefits: [
-        "Redução de 70% no tempo de execução de testes",
-        "Cobertura de testes 24/7",
-        "Detecção precoce de bugs"
-      ]
-    },
-    {
-      icon: <Globe size={24} />,
-      title: "Validação de APIs e Testes de Performance",
-      description: "Testes completos de APIs REST e análise de performance de aplicações",
-      technologies: ["Postman", "JMeter", "Python"],
-      benefits: [
-        "Garantia de funcionamento das integrações",
-        "Identificação de gargalos de performance",
-        "Relatórios detalhados de carga"
-      ]
-    },
-    {
-      icon: <Shield size={24} />,
-      title: "Estratégia de Testes Manuais",
-      description: "Planejamento e execução de testes manuais estruturados e documentados",
-      technologies: ["Análise de Regras de Negócio", "Documentação de Bugs", "Figma", "Gherkin", "BDD"],
-      benefits: [
-        "Cobertura completa de cenários críticos",
-        "Documentação detalhada de defeitos",
-        "Validação de usabilidade",
-        "Cenários em linguagem natural (Gherkin)"
-      ]
-    },
-    {
-      icon: <Zap size={24} />,
-      title: "Integração CI/CD",
-      description: "Implementação de testes automatizados em pipelines de integração contínua",
-      technologies: ["GitLab CI", "Jenkins"],
-      benefits: [
-        "Feedback imediato sobre qualidade",
-        "Bloqueio automático de deploys com falhas",
-        "Histórico completo de execuções"
-      ]
-    },
-    {
-      icon: <CheckCircle size={24} />,
-      title: "Auditoria de Qualidade",
-      description: "Análise completa dos processos de QA existentes e propostas de melhoria",
-      technologies: ["Análise de Processos", "Documentação", "Métricas de Qualidade"],
-      benefits: [
-        "Identificação de gaps no processo atual",
-        "Plano de ação para melhorias",
-        "Definição de métricas de qualidade"
-      ]
-    },
-    {
-      icon: <BarChart3 size={24} />,
-      title: "Relatórios e Métricas de QA",
-      description: "Criação de dashboards e relatórios para acompanhamento da qualidade",
-      technologies: ["Análise de Dados", "Documentação", "Métricas"],
-      benefits: [
-        "Visibilidade completa da qualidade",
-        "Tomada de decisão baseada em dados",
-        "Acompanhamento de tendências"
-      ]
-    }
-  ];
-
   return (
     <section className="py-20 bg-white" id="solucoes">
       <div className="container mx-auto px-6">
@@ -84,7 +15,7 @@ const Solutions = () => {
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
+            {solutionsData.map((solution, index) => (
               <div 
                 key={index}
                 className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border-2 border-t-purple-100 border-b-purple-400 border-l-purple-200 border-r-purple-200 hover:border-t-purple-200 hover:border-b-purple-500 hover:-translate-y-1"
