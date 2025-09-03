@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, GitlabIcon, Linkedin, Download, MessageCircle } from 'lucide-react';
+import { Phone, Mail, Github, Linkedin, Download, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const contactMethods = [
@@ -16,10 +16,10 @@ const Contact = () => {
       href: "mailto:douglas.si.sa@gmail.com"
     },
     {
-      icon: <GitlabIcon size={20} />,
+      icon: <Github size={20} />,
       label: "Projetos",
-      value: "douglas.si.sa/projects",
-      href: "https://gitlab.com/users/douglas.si.sa/projects"
+      value: "github.com/Douglasjash",
+      href: "https://github.com/Douglasjash"
     }
   ];
 
@@ -97,8 +97,8 @@ const Contact = () => {
               </span>
               <span className="text-purple-400">|</span>
               <span className="flex items-center gap-2">
-                <GitlabIcon size={16} />
-                douglas.si.sa/projects
+                <Github size={16} />
+                github.com/Douglasjash
               </span>
             </p>
           </div>

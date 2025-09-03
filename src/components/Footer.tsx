@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, GitlabIcon } from 'lucide-react';
+import { Heart, Github } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -8,13 +8,13 @@ const Footer = () => {
         <div className="text-center">
           <div className="mb-4">
             <a
-              href="https://gitlab.com/users/douglas.si.sa/projects"
+              href="https://github.com/Douglasjash"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
             >
-              <GitlabIcon size={16} />
-              Veja meus projetos no GitLab
+              <Github size={16} />
+              Veja meus projetos no GitHub
             </a>
           </div>
           <p className="flex items-center justify-center gap-2 text-sm">

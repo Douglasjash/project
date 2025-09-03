@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, GitlabIcon, ChevronDown, X } from 'lucide-react';
+import { Phone, Mail, Github, ChevronDown, X } from 'lucide-react';
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -70,8 +70,8 @@ const Header = () => {
               <span>douglas.si.sa@gmail.com</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-              <GitlabIcon size={16} />
-              <span>douglas.si.sa/projects</span>
+              <Github size={16} />
+              <span>github.com/Douglasjash</span>
             </div>
           </div>
 
