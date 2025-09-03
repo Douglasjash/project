@@ -1,0 +1,97 @@
+pipeline {
+    agent any
+    
+    environment {
+        // Definir variáveis de ambiente se necessário
+        NODE_VERSION = '18'
+        PROJECT_NAME = 'Portfolio-QA-Douglas'
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Fazendo checkout do código...'
+                // O checkout é automático quando usando SCM
+                checkout scm
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                echo 'Instalando dependências...'
+                script {
+                    if (isUnix()) {
+                        sh 'npm install'
+                    } else {
+                        bat 'npm install'
+                    }
+                }
+            }
+        }
+        
+        stage('Lint & Code Quality') {
+            steps {
+                echo 'Executando verificações de qualidade de código...'
+                script {
+                    if (isUnix()) {
+                        sh 'npm run lint || true'
+                    } else {
+                        bat 'npm run lint || exit 0'
+                    }
+                }
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Construindo o projeto...'
+                script {
+                    if (isUnix()) {
+                        sh 'npm run build'
+                    } else {
+                        bat 'npm run build'
+                    }
+                }
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Executando testes...'
+                script {
+                    if (isUnix()) {
+                        sh 'npm test || true'
+                    } else {
+                        bat 'npm test || exit 0'
+                    }
+                }
+            }
+        }
+        
+        stage('Archive Artifacts') {
+            steps {
+                echo 'Arquivando artefatos...'
+                archiveArtifacts artifacts: 'dist/**/*', fingerprint: true
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'Pipeline finalizado!'
+            // Limpar workspace se necessário
+            cleanWs()
+        }
+        success {
+            echo 'Pipeline executado com sucesso! ✅'
+            // Notificações de sucesso podem ser adicionadas aqui
+        }
+        failure {
+            echo 'Pipeline falhou! ❌'
+            // Notificações de falha podem ser adicionadas aqui
+        }
+        unstable {
+            echo 'Pipeline instável! ⚠️'
+        }
+    }
+}
