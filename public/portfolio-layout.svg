@@ -1,0 +1,427 @@
+<svg width="1200" height="6000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 6000">
+  <!-- Definições de gradientes e filtros -->
+  <defs>
+    <!-- Gradiente principal -->
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente para cards -->
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f3e8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente para botões -->
+    <linearGradient id="buttonGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9333ea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sombra para elementos -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    
+    <!-- Sombra mais intensa -->
+    <filter id="strongShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- Padrão de fundo -->
+    <pattern id="backgroundPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="50" cy="50" r="30" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Fundo principal -->
+  <rect width="1200" height="6000" fill="#ffffff"/>
+  
+  <!-- HEADER SECTION -->
+  <rect width="1200" height="800" fill="url(#headerGradient)"/>
+  <rect width="1200" height="800" fill="url(#backgroundPattern)"/>
+  
+  <!-- Foto do perfil -->
+  <circle cx="600" cy="200" r="80" fill="#ffffff" filter="url(#strongShadow)"/>
+  <circle cx="600" cy="200" r="76" fill="#e5e7eb"/>
+  <text x="600" y="210" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">FOTO</text>
+  
+  <!-- Nome principal -->
+  <text x="600" y="340" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Douglas Santos</text>
+  
+  <!-- Título profissional -->
+  <text x="600" y="380" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="20">Quality Assurance | Especialista em Testes Manuais e Automatizados</text>
+  
+  <!-- Headline -->
+  <text x="600" y="420" text-anchor="middle" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="18" font-weight="600">"Garantindo qualidade e confiança em cada entrega de software."</text>
+  
+  <!-- Subheadline -->
+  <text x="600" y="450" text-anchor="middle" fill="#d1d5db" font-family="Arial, sans-serif" font-size="14">Profissional de QA com experiência em testes manuais e automatizados</text>
+  <text x="600" y="470" text-anchor="middle" fill="#d1d5db" font-family="Arial, sans-serif" font-size="14">para aplicações desktop e web</text>
+  
+  <!-- Informações de contato -->
+  <g transform="translate(300, 520)">
+    <!-- Telefone -->
+    <rect x="0" y="0" width="180" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+    <text x="90" y="25" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">(65) 99646-7662</text>
+    
+    <!-- Email -->
+    <rect x="200" y="0" width="200" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+    <text x="300" y="25" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">douglas.si.sa@gmail.com</text>
+    
+    <!-- GitLab -->
+    <rect x="420" y="0" width="180" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+    <text x="510" y="25" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">douglas.si.sa/projects</text>
+  </g>
+  
+  <!-- Botões CTA -->
+  <g transform="translate(400, 600)">
+    <!-- Botão Projetos -->
+    <rect x="0" y="0" width="160" height="50" rx="25" fill="url(#buttonGradient)" filter="url(#shadow)"/>
+    <text x="80" y="32" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">Veja meus projetos</text>
+    
+    <!-- Botão Contato -->
+    <rect x="180" y="0" width="160" height="50" rx="25" fill="none" stroke="#a855f7" stroke-width="2"/>
+    <text x="260" y="32" text-anchor="middle" fill="#a855f7" font-family="Arial, sans-serif" font-size="14" font-weight="600">Entre em contato</text>
+  </g>
+  
+  <!-- Indicador de scroll -->
+  <g transform="translate(590, 750)">
+    <path d="M10 5 L15 10 L20 5" stroke="#a855f7" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- SOBRE MIM SECTION -->
+  <g transform="translate(0, 850)">
+    <!-- Fundo da seção -->
+    <rect width="1200" height="600" fill="#ffffff"/>
+    
+    <!-- Título da seção -->
+    <text x="600" y="60" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="36" font-weight="bold">Sobre Mim</text>
+    
+    <!-- Texto descritivo -->
+    <text x="200" y="120" fill="#374151" font-family="Arial, sans-serif" font-size="16">
+      <tspan x="200" dy="0">Profissional de Quality Assurance (QA) com experiência em testes manuais e automatizados</tspan>
+      <tspan x="200" dy="25">para aplicações desktop e web (Experiência maior em testes de aplicações Delphi).</tspan>
+      <tspan x="200" dy="50">Atuação em gestão de processos de testes, criação e manutenção de cenários de validação</tspan>
+      <tspan x="200" dy="25">de regras de negócio e reporte de defeitos.</tspan>
+      <tspan x="200" dy="50">Experiência complementar em implantação de sistemas e suporte técnico, proporcionando</tspan>
+      <tspan x="200" dy="25">visão ampla do ciclo de vida do software.</tspan>
+    </text>
+    
+    <!-- Pilares da atuação -->
+    <text x="600" y="300" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Pilares da minha atuação</text>
+    
+    <!-- Cards dos pilares -->
+    <g transform="translate(100, 350)">
+      <!-- Pilar 1: Automação -->
+      <rect x="0" y="0" width="300" height="180" rx="12" fill="url(#cardGradient)" filter="url(#shadow)"/>
+      <rect x="20" y="20" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="44" y="50" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">🔍</text>
+      <text x="20" y="90" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Automação de Testes</text>
+      <text x="20" y="115" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">
+        <tspan x="20" dy="0">Implementação de frameworks</tspan>
+        <tspan x="20" dy="18">robustos para testes automatizados</tspan>
+      </text>
+      
+      <!-- Pilar 2: Testes Funcionais -->
+      <rect x="350" y="0" width="300" height="180" rx="12" fill="url(#cardGradient)" filter="url(#shadow)"/>
+      <rect x="370" y="20" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="394" y="50" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">⚙️</text>
+      <text x="370" y="90" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Testes Funcionais e Validação</text>
+      <text x="370" y="115" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">
+        <tspan x="370" dy="0">Verificação minuciosa de regras</tspan>
+        <tspan x="370" dy="18">de negócio e funcionalidades</tspan>
+      </text>
+      
+      <!-- Pilar 3: Melhoria Contínua -->
+      <rect x="700" y="0" width="300" height="180" rx="12" fill="url(#cardGradient)" filter="url(#shadow)"/>
+      <rect x="720" y="20" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="744" y="50" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">📈</text>
+      <text x="720" y="90" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Melhoria Contínua</text>
+      <text x="720" y="115" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">
+        <tspan x="720" dy="0">Otimização constante dos</tspan>
+        <tspan x="720" dy="18">processos de qualidade</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- SKILLS SECTION -->
+  <g transform="translate(0, 1500)">
+    <!-- Fundo da seção -->
+    <rect width="1200" height="800" fill="#f9fafb"/>
+    
+    <!-- Título da seção -->
+    <text x="600" y="60" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="36" font-weight="bold">Skills &amp; Competências</text>
+    
+    <!-- Grid de skills -->
+    <g transform="translate(100, 120)">
+      <!-- Automação de Testes UI -->
+      <rect x="0" y="0" width="320" height="220" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+      <rect x="20" y="20" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="44" y="50" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">🤖</text>
+      <text x="80" y="50" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Automação de Testes UI</text>
+      <rect x="20" y="80" width="100" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="70" y="97" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">TestComplete</text>
+      <rect x="130" y="80" width="90" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="175" y="97" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Katalon Studio</text>
+      <rect x="230" y="80" width="70" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="265" y="97" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Ranorex</text>
+      <rect x="20" y="115" width="70" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="55" y="132" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Selenium</text>
+      <rect x="100" y="115" width="110" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="155" y="132" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Robot Framework</text>
+      
+      <!-- APIs -->
+      <rect x="350" y="0" width="320" height="220" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+      <rect x="370" y="20" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="394" y="50" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">🌐</text>
+      <text x="430" y="50" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">APIs</text>
+      <rect x="370" y="80" width="70" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="405" y="97" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Postman</text>
+      
+      <!-- Linguagens -->
+      <rect x="700" y="0" width="320" height="220" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+      <rect x="720" y="20" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="744" y="50" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">💻</text>
+      <text x="780" y="50" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Linguagens</text>
+      <rect x="720" y="80" width="110" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="775" y="97" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Python (Básico)</text>
+      <rect x="840" y="80" width="130" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="905" y="97" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">JavaScript (Básico)</text>
+      
+      <!-- DevOps -->
+      <rect x="0" y="250" width="320" height="220" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+      <rect x="20" y="270" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="44" y="300" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">🔧</text>
+      <text x="80" y="300" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">DevOps</text>
+      <rect x="20" y="330" width="70" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="55" y="347" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">GitLab CI</text>
+      <rect x="100" y="330" width="60" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="130" y="347" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Jenkins</text>
+      
+      <!-- Outros -->
+      <rect x="350" y="250" width="320" height="220" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+      <rect x="370" y="270" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="394" y="300" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">🎨</text>
+      <text x="430" y="300" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Outros</text>
+      <rect x="370" y="330" width="50" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="395" y="347" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Figma</text>
+      <rect x="430" y="330" width="150" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="505" y="347" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Análise de regras de negócio</text>
+      <rect x="370" y="365" width="200" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="470" y="382" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Relatórios e documentação de bugs</text>
+      
+      <!-- Idiomas -->
+      <rect x="700" y="250" width="320" height="220" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+      <rect x="720" y="270" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="744" y="300" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">💬</text>
+      <text x="780" y="300" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Idiomas</text>
+      <rect x="720" y="330" width="120" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="780" y="347" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Português — Nativo</text>
+      <rect x="850" y="330" width="110" height="25" rx="12" fill="#f3f4f6"/>
+      <text x="905" y="347" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Inglês — Avançado</text>
+    </g>
+  </g>
+  
+  <!-- PROJETOS SECTION -->
+  <g transform="translate(0, 2350)">
+    <!-- Fundo da seção -->
+    <rect width="1200" height="1000" fill="#ffffff"/>
+    
+    <!-- Título da seção -->
+    <text x="600" y="60" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="36" font-weight="bold">Projetos em Destaque</text>
+    
+    <!-- Grid de projetos -->
+    <g transform="translate(100, 120)">
+      <!-- Projeto 1: E-commerce -->
+      <rect x="0" y="0" width="480" height="400" rx="12" fill="#f9fafb" filter="url(#shadow)"/>
+      <rect x="20" y="20" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="44" y="50" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">✅</text>
+      <text x="80" y="50" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Automação E-commerce Platform</text>
+      <text x="20" y="90" fill="#374151" font-family="Arial, sans-serif" font-size="14">
+        <tspan x="20" dy="0">Framework completo de testes automatizados para</tspan>
+        <tspan x="20" dy="18">plataforma de e-commerce com mais de 200 cenários</tspan>
+        <tspan x="20" dy="18">de teste cobrindo fluxos críticos.</tspan>
+      </text>
+      <text x="20" y="170" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">TECNOLOGIAS:</text>
+      <rect x="20" y="185" width="110" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="75" y="198" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">Selenium WebDriver</text>
+      <rect x="140" y="185" width="90" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="185" y="198" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">TestComplete</text>
+      <rect x="240" y="185" width="80" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="280" y="198" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">Jenkins CI/CD</text>
+      <text x="20" y="230" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">PRINCIPAIS RESULTADOS:</text>
+      <text x="20" y="250" fill="#374151" font-family="Arial, sans-serif" font-size="12">
+        <tspan x="20" dy="0">✓ Redução de 70% no tempo de execução dos testes</tspan>
+        <tspan x="20" dy="18">✓ Cobertura de 95% dos cenários críticos</tspan>
+        <tspan x="20" dy="18">✓ Integração com pipeline CI/CD</tspan>
+      </text>
+      
+      <!-- Projeto 2: ERP Desktop -->
+      <rect x="520" y="0" width="480" height="400" rx="12" fill="#f9fafb" filter="url(#shadow)"/>
+      <rect x="540" y="20" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="564" y="50" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">🛡️</text>
+      <text x="600" y="50" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Validação Sistema ERP Desktop</text>
+      <text x="540" y="90" fill="#374151" font-family="Arial, sans-serif" font-size="14">
+        <tspan x="540" dy="0">Projeto de validação abrangente para sistema ERP</tspan>
+        <tspan x="540" dy="18">desenvolvido em Delphi, incluindo testes de interface</tspan>
+        <tspan x="540" dy="18">e validação de regras de negócio complexas.</tspan>
+      </text>
+      <text x="540" y="170" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">TECNOLOGIAS:</text>
+      <rect x="540" y="185" width="70" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="575" y="198" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">Ranorex</text>
+      <rect x="620" y="185" width="90" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="665" y="198" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">TestComplete</text>
+      <rect x="720" y="185" width="80" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="760" y="198" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">SQL Server</text>
+      <text x="540" y="230" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">PRINCIPAIS RESULTADOS:</text>
+      <text x="540" y="250" fill="#374151" font-family="Arial, sans-serif" font-size="12">
+        <tspan x="540" dy="0">✓ Identificação de 150+ bugs críticos</tspan>
+        <tspan x="540" dy="18">✓ Melhoria na estabilidade do sistema</tspan>
+        <tspan x="540" dy="18">✓ Documentação completa de casos de teste</tspan>
+      </text>
+      
+      <!-- Projeto 3: API Testing -->
+      <rect x="0" y="450" width="480" height="400" rx="12" fill="#f9fafb" filter="url(#shadow)"/>
+      <rect x="20" y="470" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="44" y="500" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">⚡</text>
+      <text x="80" y="500" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">API Testing Framework Bancário</text>
+      <text x="20" y="540" fill="#374151" font-family="Arial, sans-serif" font-size="14">
+        <tspan x="20" dy="0">Desenvolvimento de suite de testes para APIs REST</tspan>
+        <tspan x="20" dy="18">de sistema bancário, incluindo testes de segurança,</tspan>
+        <tspan x="20" dy="18">performance e validação de transações financeiras.</tspan>
+      </text>
+      <text x="20" y="620" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">TECNOLOGIAS:</text>
+      <rect x="20" y="635" width="70" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="55" y="648" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">Postman</text>
+      <rect x="100" y="635" width="110" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="155" y="648" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">Robot Framework</text>
+      <rect x="220" y="635" width="60" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="250" y="648" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">Python</text>
+      <text x="20" y="680" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">PRINCIPAIS RESULTADOS:</text>
+      <text x="20" y="700" fill="#374151" font-family="Arial, sans-serif" font-size="12">
+        <tspan x="20" dy="0">✓ Automação de 300+ endpoints</tspan>
+        <tspan x="20" dy="18">✓ Validação de segurança e compliance</tspan>
+        <tspan x="20" dy="18">✓ Testes de carga e stress</tspan>
+      </text>
+      
+      <!-- Projeto 4: Performance Testing -->
+      <rect x="520" y="450" width="480" height="400" rx="12" fill="#f9fafb" filter="url(#shadow)"/>
+      <rect x="540" y="470" width="48" height="48" rx="8" fill="#f3e8ff"/>
+      <text x="564" y="500" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="24">📊</text>
+      <text x="600" y="500" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Performance Testing Suite</text>
+      <text x="540" y="540" fill="#374151" font-family="Arial, sans-serif" font-size="14">
+        <tspan x="540" dy="0">Implementação de testes de performance para</tspan>
+        <tspan x="540" dy="18">aplicação web de alta demanda, incluindo análise</tspan>
+        <tspan x="540" dy="18">de bottlenecks e otimização de recursos.</tspan>
+      </text>
+      <text x="540" y="620" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">TECNOLOGIAS:</text>
+      <rect x="540" y="635" width="60" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="570" y="648" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">JMeter</text>
+      <rect x="610" y="635" width="90" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="655" y="648" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">Katalon Studio</text>
+      <rect x="710" y="635" width="70" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="745" y="648" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="10">GitLab CI</text>
+      <text x="540" y="680" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">PRINCIPAIS RESULTADOS:</text>
+      <text x="540" y="700" fill="#374151" font-family="Arial, sans-serif" font-size="12">
+        <tspan x="540" dy="0">✓ Identificação de gargalos críticos</tspan>
+        <tspan x="540" dy="18">✓ Melhoria de 40% na performance</tspan>
+        <tspan x="540" dy="18">✓ Relatórios automatizados de performance</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- FORMAÇÃO SECTION -->
+  <g transform="translate(0, 3400)">
+    <!-- Fundo da seção -->
+    <rect width="1200" height="300" fill="#f9fafb"/>
+    
+    <!-- Título da seção -->
+    <text x="600" y="60" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="36" font-weight="bold">Formação Acadêmica</text>
+    
+    <!-- Card de formação -->
+    <g transform="translate(300, 120)">
+      <rect x="0" y="0" width="600" height="120" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+      <rect x="20" y="20" width="64" height="64" rx="8" fill="#f3e8ff"/>
+      <text x="52" y="58" text-anchor="middle" fill="#9333ea" font-family="Arial, sans-serif" font-size="32">🎓</text>
+      <text x="100" y="40" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="600">Tecnólogo em Análise e Desenvolvimento de Sistemas</text>
+      <text x="100" y="65" fill="#374151" font-family="Arial, sans-serif" font-size="16">Universidade Estácio de Sá (UNESA)</text>
+      <text x="100" y="85" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">Cursando</text>
+      <rect x="200" y="75" width="100" height="25" rx="12" fill="#f3e8ff"/>
+      <text x="250" y="92" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="12" font-weight="500">Em andamento</text>
+    </g>
+  </g>
+  
+  <!-- CONTATO SECTION -->
+  <g transform="translate(0, 3750)">
+    <!-- Fundo da seção -->
+    <rect width="1200" height="800" fill="url(#headerGradient)"/>
+    
+    <!-- Título da seção -->
+    <text x="600" y="80" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" font-weight="bold">Vamos Conversar?</text>
+    <text x="600" y="120" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="18">📌 Pronto para elevar a qualidade do seu software?</text>
+    
+    <!-- Cards de contato -->
+    <g transform="translate(200, 180)">
+      <!-- Telefone -->
+      <rect x="0" y="0" width="240" height="150" rx="12" fill="rgba(255,255,255,0.1)" filter="url(#shadow)"/>
+      <rect x="96" y="20" width="48" height="48" rx="8" fill="#9333ea"/>
+      <text x="120" y="50" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">📞</text>
+      <text x="120" y="90" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="14" font-weight="600">Telefone</text>
+      <text x="120" y="110" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14">(65) 99646-7662</text>
+      
+      <!-- Email -->
+      <rect x="280" y="0" width="240" height="150" rx="12" fill="rgba(255,255,255,0.1)" filter="url(#shadow)"/>
+      <rect x="376" y="20" width="48" height="48" rx="8" fill="#9333ea"/>
+      <text x="400" y="50" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">✉️</text>
+      <text x="400" y="90" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="14" font-weight="600">Email</text>
+      <text x="400" y="110" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14">douglas.si.sa@gmail.com</text>
+      
+      <!-- Projetos -->
+      <rect x="560" y="0" width="240" height="150" rx="12" fill="rgba(255,255,255,0.1)" filter="url(#shadow)"/>
+      <rect x="656" y="20" width="48" height="48" rx="8" fill="#9333ea"/>
+      <text x="680" y="50" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">🔗</text>
+      <text x="680" y="90" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="14" font-weight="600">Projetos</text>
+      <text x="680" y="110" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14">douglas.si.sa/projects</text>
+    </g>
+    
+    <!-- Botões CTA -->
+    <g transform="translate(200, 380)">
+      <!-- LinkedIn -->
+      <rect x="0" y="0" width="200" height="50" rx="25" fill="#0077b5" filter="url(#shadow)"/>
+      <text x="100" y="32" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">Fale comigo no LinkedIn</text>
+      
+      <!-- Email -->
+      <rect x="220" y="0" width="160" height="50" rx="25" fill="none" stroke="#a855f7" stroke-width="2"/>
+      <text x="300" y="32" text-anchor="middle" fill="#a855f7" font-family="Arial, sans-serif" font-size="14" font-weight="600">Envie um e-mail</text>
+      
+      <!-- CV -->
+      <rect x="400" y="0" width="160" height="50" rx="25" fill="#16a34a" filter="url(#shadow)"/>
+      <text x="480" y="32" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">Baixe meu CV</text>
+    </g>
+    
+    <!-- Informações de contato resumidas -->
+    <g transform="translate(200, 480)">
+      <text x="400" y="20" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="12">
+        <tspan>📞 (65) 99646-7662 | ✉️ douglas.si.sa@gmail.com | 🔗 douglas.si.sa/projects</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- FOOTER SECTION -->
+  <g transform="translate(0, 5600)">
+    <!-- Fundo do footer -->
+    <rect width="1200" height="200" fill="#1f2937"/>
+    
+    <!-- Link GitLab -->
+    <text x="600" y="60" text-anchor="middle" fill="#a855f7" font-family="Arial, sans-serif" font-size="14">🔗 Veja meus projetos no GitLab</text>
+    
+    <!-- Copyright -->
+    <text x="600" y="100" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="12">
+      <tspan>Desenvolvido com ❤️ por Douglas Santos © 2025</tspan>
+    </text>
+    <text x="600" y="120" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="10">Todos os direitos reservados</text>
+  </g>
+</svg>
